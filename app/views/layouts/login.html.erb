@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>登录页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <%= stylesheet_link_tag  'admin', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!--[if lt IE 9]>
+    <script src="/ie/ie.min.js"></script>
+  <![endif]-->
+
+  <style>
+    #signin-demo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      z-index: 10000;
+      background: rgba(0,0,0,.6);
+      padding: 6px;
+      border-radius: 3px;
+    }
+    #signin-demo img { cursor: pointer; height: 40px; }
+    #signin-demo img:hover { opacity: .5; }
+    #signin-demo div {
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      padding-bottom: 6px;
+    }
+  </style>
+
+</head>
+<body class="theme-default page-signin">
+
+  <!-- Page background -->
+  <div id="page-signin-bg">
+    <!-- Background overlay -->
+    <div class="overlay"></div>
+    <!-- Replace this with your bg image -->
+    <img src="" alt="">
+  </div>
+  <!-- / Page background -->
+
+  <!-- Container -->
+  <div class="signin-container">
+
+    <!-- Left side -->
+    <div class="signin-info">
+      <a href="index.html" class="logo">
+        <img src="/pix/assets/demo/logo-big.png" alt="" style="margin-top: -5px;">&nbsp;
+        PixelAdmin
+      </a> <!-- / .logo -->
+      <div class="slogan">
+        Simple. Flexible. Powerful.
+      </div> <!-- / .slogan -->
+      <ul>
+        <li><i class="fa fa-outdent signin-icon"></i> 中心用户： admin： 123456</li>
+      </ul> <!-- / Info list -->
+    </div>
+    <!-- / Left side -->
+
+    <!-- Right side -->
+
+    <%= yield %>
+    <!-- Right side -->
+  </div>
+  <!-- / Container -->
+
+</body>
+</html>

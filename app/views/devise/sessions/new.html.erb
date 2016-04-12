@@ -1,15 +1,56 @@
-<h2>Log in</h2>
+<div class="signin-form">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  <!-- Form -->
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="signin-text">
+      <span>红豆杉后台登录</span>
+    </div> <!-- / .signin-text -->
+
+    <div class="form-group w-icon">
+      <%= f.text_field :user_name, :autofocus => true, :placeholder => "请输入您的用户名", :class=>"form-control input-lg" %>
+      <span class="fa fa-user signin-form-icon"></span>
+    </div> <!-- / Username -->
+
+    <div class="form-group w-icon">
+      <%= f.password_field :password, :class => "form-control input-lg" %>
+      <span class="fa fa-lock signin-form-icon"></span>
+    </div> <!-- / Password -->
+
+    <div class="form-actions">
+      <%= f.submit "立即登录", :class=>'signin-btn bg-primary' %>
+      <a href="#" class="forgot-password" id="forgot-password-link">忘记密码?</a>
+    </div> <!-- / .form-actions -->
+  <% end %>
+  <!-- / Form -->
+
+  <!-- "Sign In with" block -->
+  <div class="signin-with">
+    <!-- Facebook -->
+    <a href="/register/xuanze_zhuce_leixing" class="signin-with-btn" style="background:#4f6faa;background:rgba(79, 111, 170, .8);">注&nbsp;&nbsp;册</a>
   </div>
+  <!-- / "Sign In with" block -->
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <!-- Password reset form -->
+  <div class="password-reset-form" id="password-reset-form">
+    <div class="header">
+      <div class="signin-text">
+        <span>Password reset</span>
+        <div class="close">&times;</div>
+      </div> <!-- / .signin-text -->
+    </div> <!-- / .header -->
+
+    <!-- Form -->
+    <form action="index.html" id="password-reset-form_id">
+      <div class="form-group w-icon">
+        <input type="text" name="password_reset_email" id="p_email_id" class="form-control input-lg" placeholder="Enter your email">
+        <span class="fa fa-envelope signin-form-icon"></span>
+      </div> <!-- / Email -->
+
+      <div class="form-actions">
+        <input type="submit" value="SEND PASSWORD RESET LINK" class="signin-btn bg-primary">
+      </div> <!-- / .form-actions -->
+    </form>
+    <!-- / Form -->
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <!-- / Password reset form -->
+</div>

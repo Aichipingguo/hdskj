@@ -1,0 +1,20 @@
+<div class="panel">
+  <div class="panel-heading">招投标项目查询</div>
+  <div class="panel-body">
+    <div class="fl" >
+      <%= form_for @search, :url => "", :html => {:method => :get, :class => " form-inline"}  do |f| %>
+          <span>创建时间：&nbsp;
+            <%= f.text_field :created_at_gt, readonly: true, class: 'form-control', :onclick => "WdatePicker({dateFmt:'yyyy-MM-dd'})" %>-
+            <%= f.text_field :created_at_lt, readonly: true, class: 'form-control', :onclick => "WdatePicker({dateFmt:'yyyy-MM-dd 23:59:00'})" %>
+          </span>
+          <span>项目名称：&nbsp;<%= f.text_field :name_cont, class: 'form-control' %></span>
+          <span>
+          <% if params[:p].present?  %>
+            <%= hidden_field_tag :p, params[:p] %>
+          <% end %>
+          <button class="btn btn-primary btn_search btn-primary btn-small"  type="submit">查 询</button>
+        </span>
+      <% end %>
+    </div>
+  </div>
+</div>

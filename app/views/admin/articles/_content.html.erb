@@ -1,0 +1,36 @@
+<div class="am-g am-margin-top">
+  <div class="am-u-sm-4 am-u-md-2 am-text-right">
+     <%= require_span %>文章类别：
+  </div>
+  <div class="am-u-sm-8 am-u-md-10">
+  <%= f.input :category_id, label: false do %>
+            <%= f.hidden_field :category_id  %>
+            <%= dynamic_selects ArticleCategory, @article.category_id,  "article_category_id" %>
+          <% end -%>
+  </div>
+</div>
+<div class="am-g am-margin-top">
+  <div class="am-u-sm-4 am-u-md-2 am-text-right">
+     <%= require_span %>文章标题：
+  </div>
+  <div class="am-u-sm-8 am-u-md-10">
+     <%= f.text_field :title, class: "validate[required]  am-form-field am-input-sm" %>  
+  </div>
+</div>
+<div class="am-g am-margin-top">
+  <div class="am-u-sm-4 am-u-md-2 am-text-right">
+      <%= require_span %>摘要：
+  </div>
+  <div class="am-u-sm-8 am-u-md-10">
+    <%= f.text_area :quote, size: 40*40, class: "validate[required] am-form-field am-input-sm" %>  
+  </div>
+</div>
+
+<div class="am-g am-margin-top-sm">
+  <div class="am-u-sm-12 am-u-md-2 am-text-right admin-form-text">
+    内容描述
+  </div>
+  <div class="am-u-sm-12 am-u-md-10">
+     <%= f.ueditor_text :content, initialFrameHeight:250, minFrameHeight: 250 , size: '40x10' %>
+  </div>
+</div>

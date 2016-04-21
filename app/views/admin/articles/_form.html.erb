@@ -1,0 +1,21 @@
+<div class="admin-content">
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>form</small></div>
+  </div>
+
+<%= simple_form_for [:shield, @article], :html => {:multipart => true, :class => "valid_engine"}  do |f| -%>
+  <div class="am-tabs am-margin" data-am-tabs>
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">填写信息</a></li>
+    </ul>
+    <div class="am-tabs-bd">
+     <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+     <%= render :partial=> 'content' ,:locals=>{:f => f }%>
+      </div>
+    </div>
+  </div>
+  <div class="am-margin">
+    <%= f.submit '提交', class: 'am-btn am-btn-primary am-btn-xs' %>
+  </div>
+  <%end%>
+</div>

@@ -3,7 +3,7 @@
   <!-- Form -->
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="signin-text">
-      <span>红豆杉后台登录</span>
+      <span>zhzhengkeke</span>
     </div> <!-- / .signin-text -->
 
     <div class="form-group w-icon">
@@ -19,6 +19,7 @@
     <div class="form-actions">
       <%= f.submit "立即登录", :class=>'signin-btn bg-primary' %>
       <a href="#" class="forgot-password" id="forgot-password-link">忘记密码?</a>
+      <%= link_to "QQ账号登录",  user_omniauth_authorize_path(:tqq) %>
     </div> <!-- / .form-actions -->
   <% end %>
   <!-- / Form -->

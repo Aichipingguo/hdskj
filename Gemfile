@@ -15,6 +15,9 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise', '3.5.2'
+
+gem 'omniauth'
+gem 'omniauth-oauth2'
 # 默认值
 gem "default_value_for", "3.0.0.1"
 

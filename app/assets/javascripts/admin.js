@@ -6,3 +6,4 @@
 //= require pix/demo
 //= require pix/jquery.mockjax
 //= require pix/pixel-admin.min
+//= require my97/WdatePicker.js

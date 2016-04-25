@@ -1,21 +1,34 @@
-<div class="admin-content">
-  <div class="am-cf am-padding">
-    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>form</small></div>
+<div class="panel">
+  <div class="panel-heading">
+    <span class="panel-title">文章信息</span>
   </div>
-
-<%= simple_form_for [:shield, @article], :html => {:multipart => true, :class => "valid_engine"}  do |f| -%>
-  <div class="am-tabs am-margin" data-am-tabs>
-    <ul class="am-tabs-nav am-nav am-nav-tabs">
-      <li class="am-active"><a href="#tab1">填写信息</a></li>
-    </ul>
-    <div class="am-tabs-bd">
-     <div class="am-tab-panel am-fade am-in am-active" id="tab1">
-     <%= render :partial=> 'content' ,:locals=>{:f => f }%>
-      </div>
-    </div>
+  <div class="panel-body">
+    <table class="table">
+      <tr>
+        <td>
+          <%#= f.input :project_cate, as: :select, collection: BidConstants::BID_TYPE.to_a, selected: @bid_project.project_cate, include_hidden: false, label: '文章类别' %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%#= f.input :title, label: '文章标题' %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%#= f.input :quote, size: 40*40, label: '摘要：' %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%#= f.input :fkfs, as: :select, collection: BidConstants::FKFS.to_a, selected: @bid_project.fkfs, label: '是否公开' %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+           <%#= f.ueditor_text :content, initialFrameHeight:250, minFrameHeight: 250 , size: '40x10'  , label: '内容描述' %>
+        </td>
+      </tr>
+    </table>
   </div>
-  <div class="am-margin">
-    <%= f.submit '提交', class: 'am-btn am-btn-primary am-btn-xs' %>
-  </div>
-  <%end%>
 </div>

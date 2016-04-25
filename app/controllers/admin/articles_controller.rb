@@ -1,4 +1,4 @@
-class Shield::ArticlesController < ShieldController
+class Admin::ArticlesController < AdminController
   before_filter :find_article, :only => [:edit, :update, :destroy,:commit]
 
     skip_before_action :verify_authenticity_token

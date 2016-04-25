@@ -1,13 +1,12 @@
 <div class="page-header">
   <h1>
-    <%= link_to "采购项目管理", admin_articles_path %>
+    <%= link_to "文章列表管理", admin_articles_path %>
   </h1>
 </div>
-
-<%= render partial: 'search_project_header' %>
+<%= render partial: 'search' %>
 <div class="panel">
   <div class="panel-heading">
-    <div class="panel-title">采购项目</div>
+    <div class="panel-title">文章列表</div>
   </div>
 
   <div class="panel-body">
@@ -43,5 +42,5 @@
   </div>
 </div>
 <div class="pull-right">
-  <%= paginate  articles %>
+  <%= paginate  @articles %>
 </div>

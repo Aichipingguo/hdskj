@@ -1,40 +1,47 @@
 
-<h5 class='mt20' style="margin-left:50px"><%= @article_category.try(:id).present? ? "修改-#{@article_category.name}" : "新建权限菜单" -%></h5>
+<%= simple_form_for [:admin, @article_category], as: :article_category, html: {class: 'panel form-horizontal '}  do |f| %>
+<div class="col-sm-6 panel">
+  <div class="panel-heading">
+    <span class="panel-title">文章类别</span>
+  </div>
+  <div class="panel-body no-padding-hr">
+    <div class="form-group no-margin-hr panel-padding-h no-padding-t no-border-t">
+    <div class="row">
+      <label class="col-sm-2 control-label"><%= @article_category.try(:id).present? ? "修改-#{@article_category.name}" : "新建文章类别" -%></label>
+      <div class="col-sm-4">
+        <%= f.text_field :name ,:class => "form-control" %>
+      </div>
+    </div>
+  </div>
+    <div class="form-group no-margin-hr panel-padding-h">
+      <div class="row">
+        <label class="col-sm-2 control-label">父节点:</label>
+        <div class="col-sm-4">
+          <%= f.input :parent_id, label: false do %>
+          <%= f.hidden_field :parent_id  %>
+          <%= dynamic_selects ArticleCategory, @article_category.parent_id,  "article_category_parent_id" %>
+          <% end -%>
+        </div>
+        </div>
+    </div>
+    <div class="form-group no-margin-hr panel-padding-h ">
+      <div class="row">
+        <label class="col-sm-2 control-label">状态:</label>
+        <div class="col-sm-4">
+          <%= f.radio_button :usable, true %>正常
+          <%= f.radio_button :usable, false %>停用
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="panel-footer text-right">
+    <%= f.submit '提交', class: 'btn btn-primary' %>
+  </div>
+</div>
+<%end%>
 
-<%= simple_form_for [:shield, @article_category], as: :article_category, html: {class: 'valid_engine'}  do |f| %>
-<div class="am-g am-margin-top">
-  <div class="am-u-sm-4 am-u-md-2 am-text-right">
-     <%= require_span %>名称:
-  </div>
-  <div class="am-u-sm-8 am-u-md-10">
-     <%= f.text_field :name, class: "validate[required]  am-form-field am-input-sm" %>  
-  </div>
-</div>
-<div class="am-g am-margin-top">
-  <div class="am-u-sm-4 am-u-md-2 am-text-right">
-     父节点:
-  </div>
-  <div class="am-u-sm-8 am-u-md-10">
-    <%= f.input :parent_id, label: false do %>
-    <%= f.hidden_field :parent_id  %>
-    <%= dynamic_selects ArticleCategory, @article_category.parent_id,  "article_category_parent_id" %>
-    <% end -%> 
-  </div>
-</div>
-<div class="am-g am-margin-top">
-  <div class="am-u-sm-4 am-u-md-2 am-text-right">
-     状态:
-  </div>
-  <div class="am-u-sm-8 am-u-md-10">
-   <%= f.radio_button :usable, true %>正常
-   <%= f.radio_button :usable, false %>停用
-  </div>
-</div>
-<div class="am-g am-margin-top">
-  <div class="am-u-sm-4 am-u-md-6 am-text-right">
-    <%= f.submit '提交', class: 'am-btn am-btn-primary am-btn-xs' %>
-  </div>
-</div>
 
 
-<% end -%>
+
+
+

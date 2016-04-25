@@ -2,14 +2,16 @@
 $(document).ready(function(){
     window.treeOpts = ({
       current_tree: 'tree-list',
-      url: '/shield/article_categories/',
+      url: '/admin/article_categories/',
       model_name: 'ArticleCategory',
       zNodes: <%= @rs.to_json.html_safe %>
     })
     window.ztreeSetting = <%= ztree_settings %>
   });
 </script>
-<%= tree_content('添加文章分类',  url: new_shield_article_category_path, :current_id => params[:cid], :current_url => (params[:cid].present? ?  edit_shield_article_category_path(params[:cid]) : nil)) %>
+<%= tree_content('添加文章分类',  url: new_admin_article_category_path, :current_id => params[:cid], :current_url => (params[:cid].present? ?  edit_admin_article_category_path(params[:cid]) : nil)) %>
+
+
 
 <style>
  .page-header{

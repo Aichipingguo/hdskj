@@ -1,34 +1,41 @@
 <div class="panel">
-  <div class="panel-heading">
-    <span class="panel-title">文章信息</span>
+<div class="panel-heading">
+<span class="panel-title">新建文章</span>
+</div>
+<div class="panel-body">
+<%= simple_form_for [:admin, @article], :html => {:multipart => true, :class => "form-horizontal"}  do |f| -%>
+  <div class="form-group">
+    <label  class="col-sm-3 control-label">文章标题</label>
+    <div class="col-sm-4">
+        <%= f.text_field :title, class: "form-control" , :placeholder=> '请输入'%>
+    </div>
   </div>
-  <div class="panel-body">
-    <table class="table">
-      <tr>
-        <td>
-          <%#= f.input :project_cate, as: :select, collection: BidConstants::BID_TYPE.to_a, selected: @bid_project.project_cate, include_hidden: false, label: '文章类别' %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <%#= f.input :title, label: '文章标题' %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <%#= f.input :quote, size: 40*40, label: '摘要：' %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <%#= f.input :fkfs, as: :select, collection: BidConstants::FKFS.to_a, selected: @bid_project.fkfs, label: '是否公开' %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-           <%#= f.ueditor_text :content, initialFrameHeight:250, minFrameHeight: 250 , size: '40x10'  , label: '内容描述' %>
-        </td>
-      </tr>
-    </table>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">文章类别</label>
+    <div class="col-sm-2">
+       <%= f.input :category_id, label: false do %>
+          <%= f.hidden_field :category_id  %>
+          <%= dynamic_selects ArticleCategory, @article.category_id,  "article_category_id" , :class=>"form-control" %>
+        <% end -%>
+    </div>
   </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">摘要</label>
+    <div class="col-sm-4">
+       <%= f.text_area :quote, size: 40*40, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="jq-validation-phone" class="col-sm-3 control-label">内容描述</label>
+    <div class="col-sm-8">
+      <%= f.ueditor_text :content, initialFrameHeight:250, minFrameHeight: 250 , size: '40x10' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-6">
+     <%= f.submit '提交', class: 'btn btn-primary' %>
+    </div>
+  </div>
+<%end%>
+</div>
 </div>

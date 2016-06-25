@@ -22,18 +22,20 @@
       </thead>
 
       <tbody>
-        <% @articles.each do |article| %>
+        <% @articles.each_with_index do |article,index| %>
         <tr>
-          <td title='<%= article.name %>'>
+          <td title='<%= article.title %>'>
+            <%=show_index(index, @articles.limit_value) %>
+          </td>
+          <td title='<%= article.title %>'>
             <%= link_to admin_article_path(article) do %>
-              <%=  article.name %>
+              <%=  article.title %>
             <% end -%>
           </td>
-          <td><%= article.code %></td>
-          <td></td>
-          <td><%= article.purchase_type_name %></td>
-          <td><%= article.purchaser_name %></td>
-          <td><%= article.purchaser_tel %></td>
+          <td><%= article.category.name %></td>
+          <td><%= article.user.name %></td>
+          <td><%= Article::STATUS[article.status]%></td>
+          <td><%= article.updated_at.strftime("%Y-%m-%d")%></td>
           <td><%= link_to '编辑', edit_admin_article_path(article,type: 'article_index') %></td>
         </tr>
         <% end -%>

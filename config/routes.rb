@@ -20,9 +20,17 @@ Rails.application.routes.draw do
 
 
 
+
+
+
+
   namespace :admin do
 
     resources :articles do
+
+    end
+
+    resources :permissions do
 
     end
 
@@ -32,5 +40,3 @@ Rails.application.routes.draw do
   end
 
 end
-
-

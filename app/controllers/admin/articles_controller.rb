@@ -1,7 +1,7 @@
+# -*- encoding : utf-8 -*-
 class Admin::ArticlesController < AdminController
   before_filter :find_article, :only => [:edit, :update, :destroy,:commit]
 
-    skip_before_action :verify_authenticity_token
 
 
   def  index
@@ -15,6 +15,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def create
+    binding.pry
     @article = Article.new(article_params)
     @article.user_id = current_user.id
     @article.save ? flash_msg(:success) : flash_msg(:error)

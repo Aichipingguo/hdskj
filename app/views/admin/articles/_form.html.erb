@@ -13,10 +13,8 @@
   <div class="form-group">
     <label class="col-sm-3 control-label">文章类别</label>
     <div class="col-sm-2">
-       <%= f.input :category_id, label: false do %>
-          <%= f.hidden_field :category_id  %>
-          <%= dynamic_selects ArticleCategory, @article.category_id,  "article_category_id" , :class=>"form-control" %>
-        <% end -%>
+      <%= f.hidden_field :category_id, class: "validate[required]" %>
+      <%= dynamic_selects ArticleCategory, @article.category_id  %>
     </div>
   </div>
   <div class="form-group">

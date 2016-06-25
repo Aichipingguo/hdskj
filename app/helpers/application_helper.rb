@@ -18,6 +18,12 @@ module ApplicationHelper
     end
   end
 
+    # 显示序号
+  def show_index(index, per = 20)
+    params[:page] ||= 1
+    (params[:page].to_i - 1) * per.to_i + index + 1
+  end
+
   def link_to_blank(*args, &block)
     if block_given?
       options      = args.first || {}
@@ -53,11 +59,10 @@ module ApplicationHelper
   end
 
   #  无限级联下拉框 搭配js
-  def dynamic_selects(data_or_class, value_id, aim_id, options = {})
+  def dynamic_selects(data_or_class, value_id, aim_id=nil, options = {})
     data_class = data_or_class.is_a?(Class) ? data_or_class : data_or_class.first.class
     options[:include_blank] ||= "请选择"
-    # options.merge!({:class => 'multi-level', :otype => data_class.to_s, :aim_id => aim_id })
-    options = {:class => 'multi-level', :otype => data_class.to_s, :aim_id => aim_id }.merge!(options)
+    options.merge!({:class => 'multi-level', :otype => data_class.to_s, :aim_id => aim_id })
     roots = data_or_class.is_a?(Class) ? data_class.roots : data_or_class
     if options[:reject_ids]
       roots = roots.delete_if{|root| options[:reject_ids].include?(root.id)}
@@ -71,15 +76,10 @@ module ApplicationHelper
       select_text = collection_select('value_object-parent-id', value_object.id, value_object.parent.children, :id, :name, {:selected => value_object.try(:id), :include_blank => options[:include_blank]}, options) << select_text
       value_object = value_object.parent
     end
+    select_text = collection_select('value_object-parent-id', 0, roots, :id, :name, {:selected => value_object.try(:id), :include_blank => options[:include_blank]}, options) << select_text
 
-    # if data_class == Area
-    #   select_text = collection_select('value_object-parent-id', 0, roots.where("id=110000"), :id, :name, {:selected => value_object.try(:id), :include_blank => options[:include_blank]}, options) << select_text
-    # else
-      select_text = collection_select('value_object-parent-id', 0, roots, :id, :name, {:selected => value_object.try(:id), :include_blank => options[:include_blank]}, options) << select_text
-    # end
     raw select_text
   end
-
 
 
   # 下拉选择框

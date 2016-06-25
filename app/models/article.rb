@@ -5,7 +5,7 @@ class Article < ActiveRecord::Base
 
   scope  :publish  , -> {where(status: 1)}
 
-  STATUS = {'1' => '已发布', '0' => '暂存'  }
+  STATUS = {1 => '已发布', 0 => '暂存'  }
 
   # 根据名字进行查询，返回num条
   def self.get_articles(name, num)

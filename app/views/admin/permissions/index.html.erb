@@ -1,0 +1,12 @@
+<script type="text/javascript">
+$(document).ready(function(){
+    window.treeOpts = ({
+      current_tree: 'tree-list',
+      url: '/admin/permissions/',
+      model_name: 'Permission',
+      zNodes: <%= @permissions.to_ztree_node.to_json.html_safe %>
+    })
+    window.ztreeSetting = <%= ztree_settings %>
+  });
+</script>
+<%= tree_content('新增权限', url: new_admin_permission_path) %>

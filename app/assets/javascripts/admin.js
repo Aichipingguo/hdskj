@@ -1,5 +1,4 @@
-//= require jquery
-//= require jquery_ujs
+//= require common
 //= require pix/area
 //= require pix/bootstrap.min
 //= require pix/demo-mock

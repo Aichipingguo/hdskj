@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>zhzhengkeke</title>
+	<title>红豆杉科技</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<% if false %>
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
@@ -36,7 +36,7 @@
 
 				<%= link_to root_path ,class: 'navbar-brand' do %>
 					<div><img alt="Pixel Admin" src="/pix/assets/images/pixel-admin/main-navbar-logo.png"></div>
-					zhzhengkeke
+					 红豆杉科技
 				<% end %>
 
 				<!-- Main navbar toggle -->
@@ -54,11 +54,10 @@
 								<a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
 									<span class="label">5</span>
 									<i class="nav-icon fa fa-bullhorn"></i>
-									<span class="small-screen-text">Notifications</span>
+									<span class="small-screen-text">待办任务</span>
 								</a>
 								<div class="dropdown-menu widget-notifications no-padding" style="width: 300px">
 									<div class="notifications-list" id="main-navbar-notifications">
-
 										<div class="notification">
 											<div class="notification-title text-danger">SYSTEM</div>
 											<div class="notification-description"><strong>Error 500</strong>: Syntax error in index.php at line <strong>461</strong>.</div>
@@ -101,8 +100,8 @@
 							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
-									<img src="assets/demo/avatars/1.jpg" alt="">
-									<span><%#= current_user.user_name %></span>
+									<img src="/assets/avatars/1.png" alt="">
+									<span><%= current_user.user_name %></span>
 								</a>
 								<ul class="dropdown-menu">
 									<li><a href="#"><span class="label label-warning pull-right">New</span>Profile</a></li>
@@ -110,9 +109,9 @@
 									<li><a href="#"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
 									<li class="divider"></li>
                   <li>
-                    <%#= link_to session_path(current_user), method: :delete do %>
+                    <%= link_to session_path(current_user), method: :delete do %>
                       <i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;退出
-                    <%# end %>
+                    <% end %>
                   </li>
 								</ul>
 							</li>

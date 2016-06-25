@@ -10,13 +10,3 @@ $(document).ready(function(){
   });
 </script>
 <%= tree_content('添加文章分类',  url: new_admin_article_category_path, :current_id => params[:cid], :current_url => (params[:cid].present? ?  edit_admin_article_category_path(params[:cid]) : nil)) %>
-
-
-
-<style>
- .page-header{
- 		padding-left: 17px;
- 		padding-bottom: 15px;
- }
-
-</style>

@@ -17,4 +17,4 @@ public/uploads/*
 public/pix/*
 Gemfile.lock
 *.sql
-
+db/schema.rb

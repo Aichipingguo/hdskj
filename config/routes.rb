@@ -17,11 +17,13 @@ Rails.application.routes.draw do
   post 'ueditor/file', :to => 'ueditor/assets#file'
   post 'ueditor/image', :to => 'ueditor/assets#image'
 
-
-
-
-
-
+  get  'recruitment'  => 'other_tabs#recruitment'
+  get  'contract_us'  => 'other_tabs#contract_us'
+  get  'article_list' => 'other_tabs#article_list'
+  get  'knowledge_list' => 'other_tabs#knowledge_list'
+  get  'method_list' => 'other_tabs#method_list'
+  get  'message'  => 'other_tabs#message_board'
+  get  'about'  => 'other_tabs#about_us'
 
 
   namespace :admin do

@@ -1,0 +1,40 @@
+<div class="ejym_banner">
+	<img src="/plugins/images/ej_banner.jpg"/>
+</div>
+<div class="floor_one pt15 clearfix">
+	<div class="content_left">
+		<div class="crumbs pt10 pb10">当前位置：<%=title%>
+		</div>
+		<div class="zxwz " style="padding-top:0px;">
+				<ul id="tagcontent1">
+					<div>
+					 <%if articles.present?%>
+			      <% articles.each do |info, index| %>
+			      	<li  class="zxwz_content clearfix">
+							<div class="zxwz_content_left">
+								<img src="/plugins/images/icon_59.png">
+							</div>
+							<div class="zxwz_content_right ml10">
+								<div class="content_tittle">
+								  <%=link_to  info.title , sword_article_path(info)%></div>
+								<div class="content_time pt10  clearfix">
+									<div class="content_sj">
+										<span>发布时间：[<%=show_date  info.publish_time %>]</span>
+										<span>摘要</span><span style="color:#004276;">：<%=text_truncate(info.quote, 15) %></span>
+									</div>
+								</div>
+								<div class="content_content">
+
+								</div>
+							</div>
+						</li>
+			      <%end%>
+			      <%end%>
+					</div>
+				</ul>
+			</div>
+		</div>
+<%= paginate articles   if articles.present?%>
+<%= render 'shared/layout/right_list'%>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="ejym_banner">
+	<img src="/plugins/images/ej_banner.jpg"/>
+</div>
+<div class="content clearfix">
+	<div class="crumbs ">当前位置：<a href="#">人才招聘</a>  </div>
+	<div class="gywm mt20">
+		<div class="gywm_tittle">
+			人才招聘
+		</div>
+		<div class="gywm_content clearfix">
+			<img  src="/plugins/images/icon_rczp.jpg" />
+			<%if @recruit.present?%>
+      <%=@recruit.content.html_safe %>
+      <%else%>
+			  暂无文章
+			<%end%>
+		</div>
+	</div>
+</div>

@@ -1,1 +1,143 @@
-11111111111
+<div id="demo01" class="flexslider clearfix">
+  <ul class="slides">
+    <li><div class="img"><img src="/plugins/images/icon_13.png"alt="" /></div></li>
+    <li><div class="img"><img src="/plugins/images/icon_13.png"alt="" /></div></li>
+    <li><div class="img"><img src="/plugins/images/icon_13.png"alt="" /></div></li>
+    <li><div class="img"><img src="/plugins/images/icon_13.png"alt="" /></div></li>
+    <li><div class="img"><img src="/plugins/images/icon_13.png"alt="" /></div></li>
+  </ul>
+</div>
+<div class="floor_one pt15 clearfix">
+  <div class="floor_one_left">
+    <div class="floor_one_tittle clearfix">
+      <h1><%=link_to '行业资讯' , article_list_path %></h1><span>一起关注红豆杉吧</span>
+    </div>
+    <div class="floor_one_content">
+      <div class="floor_one_content_zynr clearfix">
+        <div class="floor_one_content_left">
+          <img src="/plugins/images/icon_16.png">
+        </div>
+        <div class="floor_one_content_right">
+          <h1><%=@profile.title if @profile.present?%></h1>
+          <p><%= @profile.content.html_safe  if @profile.present?%></p>
+        </div>
+      </div>
+      <ul class="floor_one_content_hyzxnr clearfix">
+      <%if @hyzx.present?%>
+        <% @hyzx.each do |info, index| %>
+        <li>
+        <%= link_to  truncate_html(info.title.html_safe,word_boundary: false, length:25, omission:""), sword_article_path(info), target: "_blank",title: info.title %><span>[<%=show_date info.publish_time %>]</span><br>
+        </li>
+        <%end%>
+        <%end%>
+      </ul>
+    </div>
+  </div>
+  <div class="floor_one_right">
+    <div class="floor_one_right_tittle"><h1><%=link_to '红豆杉百科' , knowledge_list_path %></h1></div>
+    <ul class="floor_one_right_content ">
+      <% if @knowledge.present?%>
+        <% @knowledge.each do |know, index|%>
+        <li>
+          <%=link_to  truncate_html(know.title.html_safe,word_boundary: false, length:25, omission:""), sword_article_path(know), target: "_blank",title: know.title %><br>
+          </li>
+      <%end%>
+      <%end%>
+    </ul>
+  </div>
+</div>
+<div class="floor_two">
+  <div class="floor_two_tittle">
+    <h1><a href="#">热销产品</a></h1>
+  </div>
+  <div class="slide mt20">
+    <ul id="bigSlideUl" class="slide-ul clearfix">
+      <li><img width="230" height="167" src="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span></li>
+      <li><img width="230" height="167" src="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span></li>
+      <li><img width="230" height="167" src="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span></li>
+      <li><img width="230" height="167" src="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span></li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span></li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span></li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span></li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span></li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png"/>
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+      <li><img width="230" height="167" srch="/plugins/images/icon_24.png" />
+        <span class="pic-txt"> </span> </li>
+    </ul>
+  </div>
+    <ul id="smallSlideUl" class="info-btn clearfix">
+      <li class="info-cur" id="mypic0" sid="0"><span>1</span></li>
+      <li id="mypic1" sid="1"><span>2</span></li>
+      <li id="mypic2" sid="2"><span>3</span></li>
+      <li id="mypic3" sid="3"><span>4</span></li>
+      <li id="mypic4" sid="4"><span>5</span></li>
+    </ul>
+    <em class="tab-shadow"></em></div>
+</div>
+<div class="floor_three clearfix">
+  <div class="floor_three_pzjq">
+    <div class="floor_three_tittle clearfix">
+      <h1><%=link_to '培植技巧' , method_list_path %><span> 一起学习吧</span>
+    </div>
+
+    <ul class="floor_three_content">
+      <% if @cultivation_method.present?%>
+        <% @cultivation_method.each do |know, index|%>
+        <li>
+         <%=index+1%>、<%=link_to  truncate_html(info.title.html_safe,word_boundary: false, length:25, omission:""), sword_article_path(info), target: "_blank",title: info.title %><br>
+          </li>
+      <%end%>
+      <%end%>
+    </ul>
+  </div>
+  <div class="floor_three_jdmt">
+    <div class="floor_three_jdmt_tittle clearfix">
+      <h1><a href="#">基地美图</a></h1><span>最贴近生态的</span>
+    </div>
+    <ul class="floor_three_jdmt_content clearfix">
+      <li><a href="#"><img src="/plugins/images/icon_28.png"></a></li>
+      <li><a href="#"><img src="/plugins/images/icon_28.png"></a></li>
+      <li><a href="#"><img src="/plugins/images/icon_28.png"></a></li>
+      <li><a href="#"><img src="/plugins/images/icon_28.png"></a></li>
+      <li><a href="#"><img src="/plugins/images/icon_28.png"></a></li>
+      <li><a href="#"><img src="/plugins/images/icon_28.png"></a></li>
+    </ul>
+  </div>
+</div>

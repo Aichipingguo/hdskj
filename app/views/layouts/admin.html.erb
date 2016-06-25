@@ -108,10 +108,8 @@
 									<li><a href="#"><span class="badge badge-primary pull-right">New</span>Account</a></li>
 									<li><a href="#"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
 									<li class="divider"></li>
-                  <li>
-                    <%= link_to session_path(current_user), method: :delete do %>
-                      <i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;退出
-                    <% end %>
+									<li>
+										 <%=link_to '<i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;退出'.html_safe, destroy_user_session_path,  confirm: "确定登出吗?" %>
                   </li>
 								</ul>
 							</li>

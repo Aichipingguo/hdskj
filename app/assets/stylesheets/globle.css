@@ -1,0 +1,56 @@
+
+/*reset*/
+body,p,h1,h2,h3,h4,h5,h6,dd,dl,dt,th,td,ul,li,ol,form,input,select,textarea,button,pre,legend{ margin:0;padding:0;}
+button, input, select, textarea {font: 12px Arial,Helvetica,sans-serif; vertical-align:middle; outline:none;}
+h1, h2, h3, h4, h5, h6 { font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+img,fieldset{ border:0;}
+address,cite,dfn,em,var,i{font-style:normal;}
+ul,ol{list-style-type:none;}
+sup{ vertical-align: text-top; }
+sub{ vertical-align: text-bottom; }
+.jianju_x{clear:both; height:10px;}
+
+
+/*边距*/
+.mt6{margin-top:6px;}
+.mt8{margin-top:8px;}
+.mt10{margin-top:10px;}
+.mt12{margin-top:12px;}
+.mt20{margin-top:20px;}
+.mb8{margin-bottom:8px;}
+.mb10{margin-bottom:10px;}
+.ml15{margin-left:15px; display:inline;}
+.ml8{margin-left:8px; display:inline;}
+.mr8{margin-left:8px; display:inline;}
+.pt10{padding-top:10px;}
+.pt15{padding-top:15px;}
+.pb10{padding-bottom:10px;}
+.pl10{padding-left:10px;}
+.pr10{padding-right:10px;}
+/*字体*/
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+.b{font-weight:bold;}
+/*color*/
+.pink{color:#FF007E!important;}
+.gary{color:#666666!important;}
+/*浮动*/
+.fl{float:left;}
+.fr{float:right;}
+.clear {clear: both;}
+.clearfix:after {clear:both; content:'';display: block;font-size: 0;line-height: 0;visibility: hidden;	width: 0;height: 0;}
+/*.clearfix {display: inline-block;}
+*/* html .clearfix {height: 1%;}
+
+.h32 {height:10px;}
+.h60 {height:60px;}
+.lh60 {line-height:60px;}
+.lh80 {line-height:80px;}
+.claretred {color:#e01800;}
+.w158 {width:158px;}
+.ml50 {margin-left:130px;}
+.goodsordermain .blueness {color:#005EA7;}
+.w80{width:80px;}
+.w86{width:86px;}

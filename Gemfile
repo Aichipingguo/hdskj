@@ -11,6 +11,10 @@ gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'turbolinks'
 
 
+
+# 截取html
+gem 'truncate_html', '0.9.2'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -93,5 +97,3 @@ group :development, :test do
   gem 'rails-dev-tweaks', '~> 1.2.0'
   gem 'quiet_assets'
 end
-
-

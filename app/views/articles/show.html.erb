@@ -1,0 +1,29 @@
+<div class="ejym_banner">
+    <img src="/plugins/images/ej_banner.jpg"/>
+</div>
+<div class="content clearfix">
+    <div class="content_left">
+        <div class="crumbs pt10 pb10">当前位置：<%= @article.category.name%>
+        </div>
+        <div class="details_xqnr">
+            <div class="article-colum">
+                <div class="pages_title h60"><%=@article.title%></div>
+                <div class="pages_date h60">
+                    <span>发布时间：<%=show_date @article.publish_time%></span>
+                    <span>摘要：<%= @article.quote%></span>
+                </div>
+                <div class="pages_content">
+                    <table width="100%" id="printContent">
+                        <tr>
+                            <td align="left" valign="top">
+                                <%= @article.content.html_safe %>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class=" h60"></div>
+        </div>
+    </div>
+
+</div>

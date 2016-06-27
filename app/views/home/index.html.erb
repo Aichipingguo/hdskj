@@ -26,7 +26,7 @@
       <%if @hyzx.present?%>
         <% @hyzx.each do |info, index| %>
         <li>
-        <%= link_to  truncate_html(info.title.html_safe,word_boundary: false, length:25, omission:""), sword_article_path(info), target: "_blank",title: info.title %><span>[<%=show_date info.publish_time %>]</span><br>
+        <%= link_to  truncate_html(info.title.html_safe,word_boundary: false, length:25, omission:""), article_path(info), target: "_blank",title: info.title %><span>[<%=show_date info.publish_time %>]</span><br>
         </li>
         <%end%>
         <%end%>
@@ -39,7 +39,7 @@
       <% if @knowledge.present?%>
         <% @knowledge.each do |know, index|%>
         <li>
-          <%=link_to  truncate_html(know.title.html_safe,word_boundary: false, length:25, omission:""), sword_article_path(know), target: "_blank",title: know.title %><br>
+          <%=link_to  truncate_html(know.title.html_safe,word_boundary: false, length:25, omission:""), article_path(know), target: "_blank",title: know.title %><br>
           </li>
       <%end%>
       <%end%>
@@ -121,7 +121,7 @@
       <% if @cultivation_method.present?%>
         <% @cultivation_method.each do |know, index|%>
         <li>
-         <%=index+1%>、<%=link_to  truncate_html(info.title.html_safe,word_boundary: false, length:25, omission:""), sword_article_path(info), target: "_blank",title: info.title %><br>
+         <%=index+1%>、<%=link_to  truncate_html(info.title.html_safe,word_boundary: false, length:25, omission:""), article_path(info), target: "_blank",title: info.title %><br>
           </li>
       <%end%>
       <%end%>

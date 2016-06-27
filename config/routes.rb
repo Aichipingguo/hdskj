@@ -41,4 +41,6 @@ Rails.application.routes.draw do
     end
   end
 
+    resources  :articles
+
 end

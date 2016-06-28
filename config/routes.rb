@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get  'users/auth/tqq/callback'  => "user/omniauth_callbacks#all"
 
+  get 'dynamic_selects' => "home#selects"
+
   mount UeditorRails::Engine => '/ueditor'
   post 'ueditor/file', :to => 'ueditor/assets#file'
   post 'ueditor/image', :to => 'ueditor/assets#image'

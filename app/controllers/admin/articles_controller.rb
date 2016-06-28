@@ -29,7 +29,6 @@ class Admin::ArticlesController < AdminController
     @article.save
     flash_msg("已发布")
     respond_back @article
-
   end
 
   def update

@@ -14,7 +14,7 @@
     <label class="col-sm-3 control-label">文章类别</label>
     <div class="col-sm-2">
       <%= f.hidden_field :category_id, class: "validate[required]" %>
-      <%= dynamic_selects ArticleCategory, @article.category_id  %>
+      <%= dynamic_selects ArticleCategory, @article.category_id   %>
     </div>
   </div>
   <div class="form-group">

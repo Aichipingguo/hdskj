@@ -15,7 +15,6 @@ class Admin::ArticlesController < AdminController
   end
 
   def create
-    binding.pry
     @article = Article.new(article_params)
     @article.user_id = current_user.id
     @article.save ? flash_msg(:success) : flash_msg(:error)
@@ -24,7 +23,6 @@ class Admin::ArticlesController < AdminController
 
   def commit
     @article.status = 1
-    @article.published=1
     @article.publish_time = Time.now
     @article.save
     flash_msg("已发布")

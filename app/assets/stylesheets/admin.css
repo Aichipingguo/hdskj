@@ -8,3 +8,6 @@
  *= require ztree
  *= require common
  */
+ .table-bordered th, .table-bordered td {
+   vertical-align: middle;
+ }

@@ -1,22 +1,22 @@
+//= require jquery-1.8.3.min
 //= require slider
-<!--轮播图-->
+
 $(function(){
 
-  $('#demo01').flexslider({
-    animation: "slide",
-    direction:"horizontal",
-    easing:"swing"
-  });
+	$('#demo01').flexslider({
+		animation: "slide",
+		direction:"horizontal",
+		easing:"swing"
+	});
 
-  $('#demo02').flexslider({
-    animation: "slide",
-    direction:"vertical",
-    easing:"swing"
-  });
+	$('#demo02').flexslider({
+		animation: "slide",
+		direction:"vertical",
+		easing:"swing"
+	});
 
 });
 
-<!--四图轮播-->
 $(".picimglink").css("text-decoration", "none");
 $(".picimglink").bind({
     mouseenter: function() {

@@ -90,18 +90,19 @@ a:hover {
 .search_text {
 	border: none;
 	background: none;
-	color:#dddddd;
 }
 
 .search_btn {
-	background: url('/plugins/images/icon_06.png')no-repeat 12px;
+	background: url('/plugins/icon_06.png')no-repeat 12px;
 	width: 24px;
 	height: 24px;
 	border: none;
 	padding: 12px 0px;
 	margin-right: 5px;
 }
-
+.ejym_banner{
+	text-align: center;
+}
 
 /*nav*/
 
@@ -125,7 +126,7 @@ a:hover {
 	height: 50px;
 }
 
-.nav .li_other a {
+.nav .li_other{
 	color: #ffffff;
 }
 
@@ -134,7 +135,7 @@ a:hover {
 	height: 50px;
 }
 
-.nav li a:hover {
+.nav a li:hover {
 	color: #ffffff;
 }
 
@@ -182,7 +183,7 @@ a:hover {
 	overflow: hidden;
 	margin: 35px 60px;
 	display: block;
-	background: url('/plugins/images/ad_ctr.png') no-repeat;
+	background: url('/plugins/ad_ctr.png') no-repeat;
 	position: absolute;
 	top: 30%;
 	z-index: 10;
@@ -232,7 +233,7 @@ a:hover {
 }
 
 .flex-control-paging li a {
-	background: url('/plugins/images/dot.png') no-repeat 0 -16px;
+	background: url('/plugins/dot.png') no-repeat 0 -16px;
 	display: block;
 	height: 16px;
 	overflow: hidden;
@@ -631,7 +632,7 @@ a:hover {
 	line-height: 63px;
 }
 .floor_one_right_content  li{
-	background: url('/plugins/images/icon_10.png')no-repeat 12px 13px;
+	background: url('/plugins/icon_10.png')no-repeat 12px 13px;
 }
 
 /*二级页面*/
@@ -731,7 +732,7 @@ a:hover {
 .login_width_content {
 	width: 100%;
 	height: 680px;
-	background: url('/plugins/images/login_logo.png') no-repeat;
+	background: url('/plugins/login_logo.png') no-repeat;
 }
 
 .login_content {
@@ -751,11 +752,11 @@ a:hover {
 
 .login-box {
 	border-top: 4px solid #c1272d;
-	background: url('/plugins/images/icon_131_03.png')no-repeat;
+	background: url('/plugins/icon_131_03.png')no-repeat;
 	width: 420px;
 	height: 600px;
 	_background: none;
-	_filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src="/plugins/images/login_box_03.png", sizingMethod="crop");
+	_filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src="images/login_box_03.png", sizingMethod="crop");
 }
 
 .login-mainbox {
@@ -909,17 +910,17 @@ a:hover {
 }
 
 .login_wbdl {
-	background: url('/plugins/images/icon_132_07_03.png') no-repeat 18px -3px;
+	background: url('/plugins/icon_132_07_03.png') no-repeat 18px -3px;
 	padding-top: 20px;
 }
 
 .login_qqdl {
-	background: url('/plugins/images/icon_132_07_05.png') no-repeat 18px 0px;
+	background: url('/plugins/icon_132_07_05.png') no-repeat 18px 0px;
 	padding-top: 20px;
 }
 
 .login_wxdl {
-	background: url('/plugins/images/icon_132_07_07.png') no-repeat 8px 0px;
+	background: url('/plugins/icon_132_07_07.png') no-repeat 8px 0px;
 	padding-top: 20px;
 }
 
@@ -978,13 +979,13 @@ a:hover {
 }
 
 .zxdt {
-	background: url('/plugins/images/icon_127_03.png')no-repeat 5px 0px;
+	background: url('/plugins/icon_127_03.png')no-repeat 5px 0px;
 	padding-left: 40px;
 	color: #fff;
 }
 
 .krcj {
-	background: url('/plugins/images/icon_128_05.png')no-repeat 5px 0px;
+	background: url('/plugins/icon_128_05.png')no-repeat 5px 0px;
 	padding-left: 36px;
 	color: #fff;
 }
@@ -1026,7 +1027,7 @@ a:hover {
 
 .xwdt_center_tittle span a:active {
 	color: #c1272d;
-	background: url('/plugins/images/icon_119.png')no-repeat;
+	background: url('/plugins/icon_119.png')no-repeat;
 }
 
 .spzxz span a {
@@ -1039,7 +1040,7 @@ a:hover {
 }
 
 .zb_lv {
-	background: url('/plugins/images/icon_125_03.png') no-repeat 95px 6px;
+	background: url('/plugins/icon_125_03.png') no-repeat 95px 6px;
 	padding-right: 40px;
 }
 
@@ -1048,7 +1049,7 @@ a:hover {
 }
 
 .xwdt_center_content li {
-	background: url('/plugins/images/icon_07.jpg') no-repeat 0px 14px;
+	background: url('/plugins/icon_07.jpg') no-repeat 0px 14px;
 	padding-left: 10px;
 }
 
@@ -1130,15 +1131,15 @@ a:hover {
 }
 
 .rmwztb {
-	background: url('/plugins/images/icon_126_11.png')no-repeat;
+	background: url('/plugins/icon_126_11.png')no-repeat;
 }
 
 .krkttb {
-	background: url('/plugins/images/icon_126_15.png')no-repeat;
+	background: url('/plugins/icon_126_15.png')no-repeat;
 }
 
 .ptxztb {
-	background: url('/plugins/images/icon_126_26.png')no-repeat;
+	background: url('/plugins/icon_126_26.png')no-repeat;
 }
 
 .yjg_tittle {
@@ -1150,7 +1151,7 @@ a:hover {
 .yjg_tittle {}
 
 .yjg_content li {
-	background: url('/plugins/images/icon_07.jpg') no-repeat 0px 14px;
+	background: url('/plugins/icon_07.jpg') no-repeat 0px 14px;
 	padding-left: 10px;
 }
 
@@ -1309,7 +1310,7 @@ a:hover {
 }
 
 .content_plsl a {
-	background: url('/plugins/images/icon_126_07.png')no-repeat 3px -1px;
+	background: url('/plugins/icon_126_07.png')no-repeat 3px -1px;
 	padding-left: 24px;
 }
 

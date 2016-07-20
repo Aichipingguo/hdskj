@@ -24,7 +24,7 @@
       <tbody>
         <% @articles.each_with_index do |article,index| %>
         <tr>
-          <td title='<%= article.title %>'>
+          <td title='<%= article.title %>' class="tc">
             <%=show_index(index, @articles.limit_value) %>
           </td>
           <td title='<%= article.title %>'>

@@ -1442,7 +1442,7 @@ a:hover {
 	background: -ms-linear-gradient(top, #222222, #333333);
 	background: linear-gradient(top, #222222, #333333);
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#333333, endColorstr=#333333)";
-	+ background: #333333;
+	background: #333333;
 }
 
 .g_textarea {
